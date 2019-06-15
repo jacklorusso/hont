@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 export const onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(
-    `This website has been updated. ` + `Reload to display the latest version?`
+    `This website has been updated. Reload to display the latest version?`
   )
 
   if (answer === true) {
