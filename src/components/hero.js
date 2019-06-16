@@ -6,20 +6,24 @@ import styled from "styled-components"
 const HeroSection = styled.section`
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 70vh;
+
+  div {
+    height: 70vh;
+  }
 `
 const HeroText = styled.h1`
   position: absolute;
   font-family: "Phantom Sans0.5";
   font-weight: 500;
-  top: 20vh;
+  top: 25vh;
   /* TODO: add some responsive sizing here */
   left: 0;
   width: 100%;
-  font-size: 2em;
+  font-size: 2.5em;
   color: white;
   text-align: center;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 `
 
 const Hero = props => (
@@ -38,7 +42,9 @@ const Hero = props => (
     `}
     render={data => (
       <HeroSection>
-        <Img fluid={data.file.childImageSharp.fluid} />
+        <div>
+          <Img fluid={data.file.childImageSharp.fluid} />
+        </div>
         <HeroText>Feel on top of the world.</HeroText>
       </HeroSection>
     )}

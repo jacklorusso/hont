@@ -11,10 +11,12 @@ import { StaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 import theme from "../theme"
 import Header from "./header"
+import Footer from "./footer"
+
 import "./global.css"
 
 const Container = styled.div`
-  max-width: 70em;
+  max-width: 80em;
   margin: 0 auto;
 `
 const Layout = ({ children }) => (
@@ -33,7 +35,7 @@ const Layout = ({ children }) => (
         <Container>
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
-          <footer>© {new Date().getFullYear()}</footer>
+          <Footer />
         </Container>
       </ThemeProvider>
     )}
