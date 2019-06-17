@@ -10,6 +10,7 @@ const HeroSection = styled.section`
 
   div {
     height: 70vh;
+    object-fit: cover;
   }
 `
 const HeroText = styled.h1`
@@ -20,17 +21,17 @@ const HeroText = styled.h1`
   /* TODO: add some responsive sizing here */
   left: 0;
   width: 100%;
-  font-size: 2.5em;
+  font-size: ${props => props.theme.fontSize[5]};
   color: white;
   text-align: center;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.11);
 `
 
 const Hero = props => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { regex: "/hero.jpg/" }) {
+        file(relativePath: { regex: "/hero1.jpg/" }) {
           childImageSharp {
             # Specify the image processing specifications right in the query.
             fluid {
